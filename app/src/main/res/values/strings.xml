@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Kariyer Net Challange</string>
+
+    <string name="login_exception_wrong_user_name_message">Geçersiz kullanıcı adı.</string>
+    <string name="login_exception_wrong_password_message">Geçersiz kullanıcı şifre.</string>
+</resources>

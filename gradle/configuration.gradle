@@ -1,0 +1,20 @@
+ext {
+
+    production = [
+            API_URL                                                 : '"https://sandbox-api.payosy.com/api/"',
+            API_DATE_FORMAT                                         : '"yyyy-MM-dd\'T\'HH:mm:ss"',
+            CLIENT_ID                                               : '"23a6eea4-c03c-49b7-8878-bf3dc2d7476f"',
+            CLIENT_SECRET                                           : '"iD3bR4bI3hC0sS5oQ0bH6bJ3xN1fD2nB6eG6nP3pF3rY2vQ3iS"',
+            NETWORKING_API_REQUEST_ACCEPT_TYPE_LABEL                : '"accept"',
+            NETWORKING_API_REQUEST_ACCEPT_TYPE_KEY                  : '"application/json"',
+            NETWORKING_API_REQUEST_CONTENT_TYPE_LABEL               : '"content-type"',
+            NETWORKING_API_REQUEST_CONTENT_TYPE_KEY                 : '"application/json"',
+            NETWORKING_API_REQUEST_AUTHORIZATION_CLIENT_ID_LABEL    : '"x-ibm-client-id"',
+            NETWORKING_API_REQUEST_AUTHORIZATION_CLIENT_SECRET_LABEL: '"x-ibm-client-secret"',
+            NETWORKING_REQUEST_TIMEOUT                              : 30000,
+            INDICATOR_PRESENTER_DELAY                               : 1000,
+            LOCALIZATION_DEFAULT_LOCALE_IDENTIFIER                  : '"tr_TR"',
+            LOCALE                                                  : '"tr"',
+            LANGUAGE                                                : '"tr-TR"'
+    ]
+}

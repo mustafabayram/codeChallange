@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.obilet.android.kariyernetchallange"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        def flavors = variant.productFlavors
+        def environment = flavors.name[0]
+        def flavorData = rootProject.ext[environment]
+
+        for (Map.Entry<String, Object> entry : flavorData.entrySet()) {
+            String key = entry.getKey()
+            Object value = entry.getValue()
+            variant.buildConfigField value.getClass().getSimpleName(), key, value.toString()
+        }
+    }
+
+    flavorDimensions "apiConfig"
+
+    productFlavors {
+        production {
+            dimension "apiConfig"
+        }
+        /*
+        local {
+            dimension "apiConfig"
+        }*/
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    def coreDependencies = rootProject.ext.coreDependencies
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def utilsDependencies = rootProject.ext.utilsDependencies
+
+    // Core Dependencies
+    implementation coreDependencies.multidex
+    annotationProcessor coreDependencies.daggerCompiler
+    implementation coreDependencies.daggerAndroid
+    implementation coreDependencies.daggerAndroidSupport
+    annotationProcessor coreDependencies.daggerAndroidCompiler
+    implementation coreDependencies.rxjava
+    implementation coreDependencies.rxandroid
+
+    implementation coreDependencies.gson
+    implementation coreDependencies.retrofit
+    implementation coreDependencies.retrofitConverter
+    implementation coreDependencies.retrofitRxAdapter
+    implementation coreDependencies.lifecycleExtensions
+    implementation coreDependencies.lifecycleReactive
+
+    // Presentation Dependencies
+    implementation presentationDependencies.appCompat
+    implementation presentationDependencies.design
+    implementation presentationDependencies.constraintLayout
+
+    // Utils dependencies
+    implementation utilsDependencies.butterKnife
+    annotationProcessor utilsDependencies.butterKnifeCompiler
+    implementation utilsDependencies.okhttpLogging
+    implementation utilsDependencies.glide
+}
