@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.obilet.android.kariyernetchallange.di.ActivityContext;
 import com.obilet.android.kariyernetchallange.di.ActivityScope;
+import com.obilet.android.kariyernetchallange.ui.presenter.PresenterModule;
 
 import dagger.Module;
 import dagger.Provides;
@@ -13,7 +14,7 @@ import dagger.Provides;
  */
 
 
-@Module(includes = {})
+@Module(includes = {PresenterModule.class})
 public abstract class ActivityModule<T extends BaseActivity> {
 
     @Provides
