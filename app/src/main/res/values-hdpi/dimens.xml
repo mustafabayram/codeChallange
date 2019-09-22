@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--scale %15-->
+
+    <dimen name="size_236pt">200.6dp</dimen>
+    <dimen name="size_160pt">136dp</dimen>
+    <dimen name="size_152pt">129.2dp</dimen>
+    <dimen name="size_123pt">104.55dp</dimen>
+    <dimen name="size_122pt">103.7dp</dimen>
+    <dimen name="size_115pt">97.75dp</dimen>
+    <dimen name="size_112pt">95.2dp</dimen>
+    <dimen name="size_110pt">93.5dp</dimen>
+    <dimen name="size_105pt">89.25dp</dimen>
+    <dimen name="size_102pt">86.7dp</dimen>
+    <dimen name="size_100pt">85dp</dimen>
+    <dimen name="size_84pt">73.1dp</dimen>
+    <dimen name="size_82pt">71.4dp</dimen>
+    <dimen name="size_80pt">68dp</dimen>
+    <dimen name="size_75pt">63.75dp</dimen>
+    <dimen name="size_60pt">51dp</dimen>
+    <dimen name="size_58pt">49.3dp</dimen>
+    <dimen name="size_40pt">34dp</dimen>
+    <dimen name="size_32pt">27.2dp</dimen>
+    <dimen name="size_30pt">25.5dp</dimen>
+    <dimen name="size_20pt">17dp</dimen>
+
+    <dimen name="font_size_35pt">29.75sp</dimen>
+
+    <dimen name="font_size_25pt">21.25sp</dimen>
+    <dimen name="font_size_24pt">20.4sp</dimen>
+    <dimen name="font_size_23pt">19.55sp</dimen>
+    <dimen name="font_size_22pt">18.7sp</dimen>
+    <dimen name="font_size_21pt">17.85sp</dimen>
+    <dimen name="font_size_20pt">17sp</dimen>
+
+    <dimen name="font_size_19pt">16.15sp</dimen>
+    <dimen name="font_size_18pt">15.3sp</dimen>
+    <dimen name="font_size_17pt">14.45sp</dimen>
+    <dimen name="font_size_16pt">13.6sp</dimen>
+    <dimen name="font_size_15pt">12.75sp</dimen>
+    <dimen name="font_size_14pt">11.9sp</dimen>
+    <dimen name="font_size_13pt">11.05sp</dimen>
+    <dimen name="font_size_12pt">10.2sp</dimen>
+    <dimen name="font_size_11pt">9.35sp</dimen>
+    <dimen name="font_size_10pt">8.5sp</dimen>
+
+    <dimen name="spacing_80pt">68dp</dimen>
+    <dimen name="spacing_56pt">47.6dp</dimen>
+    <dimen name="spacing_49pt">41.65dp</dimen>
+    <dimen name="spacing_48pt">40.8dp</dimen>
+    <dimen name="spacing_44pt">37.4dp</dimen>
+    <dimen name="spacing_42pt">35.7dp</dimen>
+    <dimen name="spacing_40pt">34dp</dimen>
+
+    <dimen name="spacing_38pt">32.3dp</dimen>
+    <dimen name="spacing_35pt">29.75dp</dimen>
+    <dimen name="spacing_34pt">28.9dp</dimen>
+    <dimen name="spacing_33pt">28.05dp</dimen>
+    <dimen name="spacing_32pt">27.2dp</dimen>
+    <dimen name="spacing_30pt">25.5dp</dimen>
+
+    <dimen name="spacing_28pt">23.8dp</dimen>
+    <dimen name="spacing_27pt">22.95dp</dimen>
+    <dimen name="spacing_26pt">22.1dp</dimen>
+    <dimen name="spacing_25pt">21.25dp</dimen>
+    <dimen name="spacing_24pt">20.4dp</dimen>
+    <dimen name="spacing_22pt">18.7dp</dimen>
+    <dimen name="spacing_21pt">17.85dp</dimen>
+    <dimen name="spacing_20pt">17dp</dimen>
+
+    <dimen name="spacing_19pt">16.15dp</dimen>
+    <dimen name="spacing_18pt">15.3dp</dimen>
+    <dimen name="spacing_17pt">14.45dp</dimen>
+    <dimen name="spacing_16pt">13.6dp</dimen>
+    <dimen name="spacing_15pt">12.75dp</dimen>
+    <dimen name="spacing_14pt">11.9dp</dimen>
+    <dimen name="spacing_13pt">11.05dp</dimen>
+    <dimen name="spacing_12pt">10.2dp</dimen>
+    <dimen name="spacing_11pt">9.35dp</dimen>
+    <dimen name="spacing_10pt">8.5dp</dimen>
+
+    <dimen name="spacing_9pt">7.65dp</dimen>
+    <dimen name="spacing_8pt">6.8dp</dimen>
+    <dimen name="spacing_7pt">5.95dp</dimen>
+    <dimen name="spacing_6pt">5.1dp</dimen>
+    <dimen name="spacing_5pt">4.25dp</dimen>
+    <dimen name="spacing_4pt">3.4dp</dimen>
+    <dimen name="spacing_3_6pt">3.06dp</dimen>
+    <dimen name="spacing_3pt">2.55dp</dimen>
+    <dimen name="spacing_2_6pt">2.21dp</dimen>
+    <dimen name="spacing_2pt">1.7dp</dimen>
+    <dimen name="spacing_1pt">0.85dp</dimen>
+    <dimen name="spacing_0_3pt">0.25dp</dimen>
+    <dimen name="spacing_none">0dp</dimen>
+
+</resources>

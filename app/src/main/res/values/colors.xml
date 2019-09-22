@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#D23B38</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorDarkGray">#585858</color>
+    <color name="colorDarkGrayInput">#707070</color>
+    <color name="colorDarkGrayOpacity40">#66585858</color>
+    <color name="colorUltraLightGray">#FAFAFA</color>
+    <color name="colorUltraLightGrayOpacity40">#66FAFAFA</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#D23B38</color>
+    <color name="colorWhiteOpacity16">#29FFFFFF</color>
+    <color name="colorGray">#AFADAD</color>
+    <color name="colorLightGray">#EDEDEF</color>
+    <color name="colorHeaderGray">#EFEFEF</color>
+
+    <color name="text_color">@color/colorBlack</color>
+    <color name="text_color_dark_gray">@color/colorDarkGray</color>
+    <color name="text_color_white">@color/colorWhite</color>
+    <color name="text_color_green">@color/colorGreen</color>
+    <color name="hint_color">@color/colorGray</color>
+
+    <color name="buttonRedBorderColor">@color/colorPrimary</color>
+    <color name="buttonGrayBorderColor">@color/colorDarkGray</color>
+
+    <color name="buttonRippleColor">#FCFCFC</color>
+    <color name="buttonTextColor">@color/colorBlack</color>
+
+    <color name="window_background_color">@color/colorUltraLightGray</color>
+    <color name="colorGreen">#0AB285</color>
+    <color name="colorBlue">#0d4d84</color>
+    <color name="colorLightBlue">#4d8cc3</color>
+    <color name="colorOrange">#ff8914</color>
+    <color name="colorLightBlueOpacity10">#1a4577a5</color>
+    <color name="colorOrangeOpacity10">#1aff8914</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorMidDarkGray">#999999</color>
+    <color name="colorPink">#efb1c0</color>
+    <color name="colorPinkOpacity40">#66efb1c0</color>
+    <color name="colorMidDarkBlue">#6797c3</color>
+    <color name="colorMidDarkBlueOpacity40">#666797c3</color>
+    <color name="colorCardViewStroke">#E6E6E6</color>
+    <color name="colorCardViewElevation">#F3F3F3</color>
+    <color name="colorNativeKeyboard">#ECEFF1</color>
+
 </resources>

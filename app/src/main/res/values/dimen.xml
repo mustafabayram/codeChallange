@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="buttonBorderRadius">0dp</dimen>
+    <dimen name="buttonBorderSize">0dp</dimen>
+    <dimen name="buttonHeight">56dp</dimen>
+    <dimen name="buttonPadding">0dp</dimen>
+    <dimen name="buttonTextSize">16sp</dimen>
+
+    <dimen name="primaryButtonBorderRadius">0dp</dimen>
+    <dimen name="primaryButtonBorderSize">0dp</dimen>
+    <dimen name="primaryButtonHeight">56dp</dimen>
+    <dimen name="primaryButtonPadding">0dp</dimen>
+    <dimen name="primaryButtonTextSize">16sp</dimen>
+
+    <dimen name="secondaryButtonBorderRadius">0dp</dimen>
+    <dimen name="secondaryButtonBorderSize">0dp</dimen>
+    <dimen name="secondaryButtonHeight">56dp</dimen>
+    <dimen name="secondaryButtonPadding">0dp</dimen>
+    <dimen name="secondaryButtonTextSize">16sp</dimen>
+</resources>

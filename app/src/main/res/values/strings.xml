@@ -3,4 +3,6 @@
 
     <string name="login_exception_wrong_user_name_message">Geçersiz kullanıcı adı.</string>
     <string name="login_exception_wrong_password_message">Geçersiz kullanıcı şifre.</string>
+    <string name="default_alert_title">Hata</string>
+    <string name="default_alert_button_text">Tamam</string>
 </resources>

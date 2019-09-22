@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3313131">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/alert_dialog_root_constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/spacing_16pt"
+        android:layout_marginRight="@dimen/spacing_16pt"
+        android:background="@drawable/background_alert_dialog">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/alert_dialog_close_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10pt"
+            android:layout_marginEnd="@dimen/spacing_10pt"
+            android:layout_marginRight="@dimen/spacing_10pt"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/spacing_6pt"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/alert_dialog_alert_title_textView"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_40pt"
+            android:gravity="center_horizontal"
+            android:text="@string/default_alert_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_20pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/alert_dialog_alert_message_textView"
+            style="@style/TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8pt"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/spacing_24pt"
+            android:paddingLeft="@dimen/spacing_24pt"
+            android:paddingEnd="@dimen/spacing_24pt"
+            android:paddingRight="@dimen/spacing_24pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alert_dialog_alert_title_textView"
+            tools:text="İşlem başarısız" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/alert_dialog_alert_button"
+            style="@style/ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_9pt"
+            android:layout_marginTop="@dimen/spacing_18pt"
+            android:layout_marginRight="@dimen/spacing_9pt"
+            android:layout_marginBottom="@dimen/spacing_28pt"
+            android:minWidth="@dimen/size_123pt"
+            android:paddingLeft="@dimen/spacing_10pt"
+            android:paddingTop="@dimen/spacing_5pt"
+            android:paddingRight="@dimen/spacing_10pt"
+            android:paddingBottom="@dimen/spacing_5pt"
+            android:text="@string/default_alert_title"
+            android:textSize="@dimen/font_size_16pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alert_dialog_alert_message_textView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
