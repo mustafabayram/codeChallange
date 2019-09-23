@@ -9,7 +9,9 @@ import java.util.concurrent.TimeUnit;
 
 import dagger.Module;
 import dagger.Provides;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -29,7 +31,16 @@ public class ApiModule {
     @ApplicationScope
     @Provides
     public OkHttpClient provideOkHttpClient(HttpLoggingInterceptor httpLoggingInterceptor) {
-        OkHttpClient.Builder builder = new OkHttpClient.Builder()
+        OkHttpClient.Builder builder = new OkHttpClient.Builder().addInterceptor(c -> {
+            Interceptor.Chain chain = c;
+            Request request = chain.request();
+            Request.Builder requestBuilder = request.newBuilder();
+
+            //header configurations
+            requestBuilder.addHeader(BuildConfig.NETWORKING_API_REQUEST_CONTENT_TYPE_LABEL, BuildConfig.NETWORKING_API_REQUEST_CONTENT_TYPE_KEY);
+            //header configurations end
+            return chain.proceed(requestBuilder.build());
+        })
                 .readTimeout(BuildConfig.NETWORKING_REQUEST_TIMEOUT, TimeUnit.MILLISECONDS)
                 .connectTimeout(BuildConfig.NETWORKING_REQUEST_TIMEOUT, TimeUnit.MILLISECONDS);
 

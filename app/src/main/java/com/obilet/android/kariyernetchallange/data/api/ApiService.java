@@ -8,8 +8,7 @@ import io.reactivex.Flowable;
 import retrofit2.http.GET;
 
 public interface ApiService {
-
-    @GET
+    @GET(".")
     Flowable<List<Product>> getProducts();
 
 }

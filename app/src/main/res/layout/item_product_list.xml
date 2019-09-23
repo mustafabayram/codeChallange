@@ -1,6 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</LinearLayout>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/date_info_linearLayout"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/date_textView"
+                style="@style/TextView.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="08" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/month_textView"
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Ekim" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/market_name_textView"
+            style="@style/TextView.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/product_price_textView"
+            app:layout_constraintStart_toEndOf="@id/date_info_linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Market  1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/order_name_textView"
+            style="@style/TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/product_price_textView"
+            app:layout_constraintStart_toEndOf="@id/date_info_linearLayout"
+            app:layout_constraintTop_toBottomOf="@id/market_name_textView"
+            tools:text="Sabun" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_state_textView"
+            style="@style/TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/product_price_textView"
+            app:layout_constraintStart_toEndOf="@id/date_info_linearLayout"
+            app:layout_constraintTop_toBottomOf="@id/order_name_textView"
+            tools:text="Yolda" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_price_textView"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/date_info_linearLayout"
+            app:layout_constraintEnd_toStartOf="@id/product_detail_expand_imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="14.5 TL" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/product_detail_expand_imageView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@id/date_info_linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/date_info_linearLayout"
+            app:srcCompat="@drawable/ic_arrow_right"
+            app:tint="@color/colorDarkGray" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/product_detail_expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_expanded="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_info_linearLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="80dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="28dp"
+                android:paddingBottom="4dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/order_detail_textView"
+                    style="@style/TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/summary_price_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="250 ml sıvı sabun" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/summary_price_textView"
+                    style="@style/TextView.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="14.5 TL" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

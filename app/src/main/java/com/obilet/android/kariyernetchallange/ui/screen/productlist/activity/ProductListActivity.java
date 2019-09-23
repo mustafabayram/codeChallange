@@ -72,17 +72,14 @@ public class ProductListActivity extends BaseActivity {
         });
         productListRecyclerView.setAdapter(adapter);
 
-        viewModel.productListResponse().observe(this, products ->
-                adapter.setItems(ArrayUtils.map(products, ProductListViewModel::new)));
-
+        viewModel.productListResponse().observe(this, products -> adapter.setItems(ArrayUtils.map(products, ProductListViewModel::new)));
+        viewModel.getProductList();
         viewModel.logoutResponse().observe(this, isLogout -> {
             startActivity(new Intent(ProductListActivity.this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
             finish();
         });
 
-        logoutButton.setOnClickListener(v -> {
-            viewModel.logout();
-        });
+        logoutButton.setOnClickListener(v -> viewModel.logout());
 
     }
 }
