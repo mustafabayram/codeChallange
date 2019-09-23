@@ -25,4 +25,8 @@ public class MembershipDataStoreFactory {
     public Flowable<Boolean> logout() {
         return localMembershipDataStore.logout();
     }
+
+    public Flowable<User> getUser() {
+        return localMembershipDataStore.getUser();
+    }
 }

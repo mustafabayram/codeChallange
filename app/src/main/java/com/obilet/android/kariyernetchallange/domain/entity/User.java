@@ -7,4 +7,10 @@ public class User {
     public String userName;
     public String password;
     public boolean rememberMe;
+
+    public User(String userName, String password, boolean rememberMe) {
+        this.userName = userName;
+        this.password = password;
+        this.rememberMe = rememberMe;
+    }
 }

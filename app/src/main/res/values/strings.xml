@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">Kariyer Net Challange</string>
+    <string name="app_name">Marketim</string>
 
     <string name="login_exception_wrong_user_name_message">Geçersiz kullanıcı adı.</string>
     <string name="login_exception_wrong_password_message">Geçersiz kullanıcı şifre.</string>
     <string name="default_alert_title">Hata</string>
     <string name="default_alert_button_text">Tamam</string>
+    <string name="login_screen_user_name_hint_text">Kullanıcı adı</string>
+    <string name="login_screen_password_hint_text">Şifre</string>
+    <string name="login_screen_remember_me_text">Beni Hatıla</string>
+    <string name="login_screen_login_button_text">Giriş</string>
 </resources>

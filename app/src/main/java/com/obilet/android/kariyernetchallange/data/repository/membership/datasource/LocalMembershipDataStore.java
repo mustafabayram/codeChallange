@@ -38,4 +38,8 @@ public class LocalMembershipDataStore {
     public Flowable<Boolean> logout() {
         return localService.hasUser().flatMap(hasUser -> hasUser ? localService.removeUser() : Flowable.just(true));
     }
+
+    public Flowable<User> getUser() {
+        return localService.getUser();
+    }
 }

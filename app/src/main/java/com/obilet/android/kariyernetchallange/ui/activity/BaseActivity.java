@@ -7,6 +7,7 @@ import androidx.annotation.LayoutRes;
 import com.google.gson.Gson;
 import com.obilet.android.kariyernetchallange.data.exception.BaseErrorException;
 import com.obilet.android.kariyernetchallange.data.local.LocalStorage;
+import com.obilet.android.kariyernetchallange.ui.presenter.AlertPresenter;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.BaseViewModel;
 
 import javax.inject.Inject;
@@ -15,6 +16,7 @@ import butterknife.ButterKnife;
 import dagger.android.support.DaggerAppCompatActivity;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.subjects.PublishSubject;
 
 /**
  * Created by Mustafa Bayram on 13.11.2018.
@@ -26,6 +28,9 @@ public abstract class BaseActivity extends DaggerAppCompatActivity {
 
     @Inject
     public LocalStorage localStorage;
+
+    @Inject
+    public AlertPresenter alertPresenter;
 
     @Inject
     public Gson gson;
@@ -71,9 +76,10 @@ public abstract class BaseActivity extends DaggerAppCompatActivity {
 
         disposables.add(viewModel.hasError().subscribe(throwable -> {
             if (throwable instanceof BaseErrorException) {
-                // show alert
+                showAlertMessage(getString(((BaseErrorException) throwable).errorMessageResId));
+            } else {
+                throwable.printStackTrace();
             }
-            throwable.printStackTrace();
         }));
     }
 
@@ -83,6 +89,10 @@ public abstract class BaseActivity extends DaggerAppCompatActivity {
 
     public <T> T deserialize(String data, Class<T> objectClass) {
         return gson.fromJson(data, objectClass);
+    }
+
+    public PublishSubject<Integer> showAlertMessage(CharSequence message) {
+        return alertPresenter.presentWithMessage(message);
     }
 
 }

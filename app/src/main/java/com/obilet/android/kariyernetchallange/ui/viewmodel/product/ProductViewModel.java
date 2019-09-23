@@ -4,10 +4,8 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.obilet.android.kariyernetchallange.BaseApplication;
 import com.obilet.android.kariyernetchallange.domain.entity.Product;
-import com.obilet.android.kariyernetchallange.domain.interactor.membership.LoginUseCase;
 import com.obilet.android.kariyernetchallange.domain.interactor.membership.LogoutUseCase;
 import com.obilet.android.kariyernetchallange.domain.interactor.product.GetProductListUseCase;
-import com.obilet.android.kariyernetchallange.domain.model.LoginRequest;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.BaseViewModel;
 
 import java.util.List;
@@ -54,7 +52,7 @@ public class ProductViewModel extends BaseViewModel {
         disposables.add(logoutUseCase.execute(null)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(response -> logoutResponse.setValue(response.isSuccess), this::error));
+                .subscribe(logoutResponse::setValue, this::error));
 
     }
 

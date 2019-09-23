@@ -3,8 +3,8 @@ package com.obilet.android.kariyernetchallange.ui.viewmodel.membership;
 import androidx.lifecycle.MutableLiveData;
 
 import com.obilet.android.kariyernetchallange.BaseApplication;
+import com.obilet.android.kariyernetchallange.domain.entity.User;
 import com.obilet.android.kariyernetchallange.domain.interactor.membership.LoginUseCase;
-import com.obilet.android.kariyernetchallange.domain.model.LoginRequest;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.BaseViewModel;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -29,12 +29,11 @@ public class MembershipViewModel extends BaseViewModel {
         return loginResponse;
     }
 
-    public void login(LoginRequest request) {
-        disposables.add(loginUseCase.execute(request)
+    public void login(User user) {
+        disposables.add(loginUseCase.execute(user)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(loginRes -> loginResponse.setValue(loginRes.isSuccess), this::error));
-
+                .subscribe(loginResponse::setValue, this::error));
     }
 
 }
