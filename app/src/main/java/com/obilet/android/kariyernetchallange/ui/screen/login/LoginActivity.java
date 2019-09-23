@@ -1,4 +1,4 @@
-package com.obilet.android.kariyernetchallange.ui.screen;
+package com.obilet.android.kariyernetchallange.ui.screen.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import com.google.android.material.button.MaterialButton;
 import com.obilet.android.kariyernetchallange.R;
 import com.obilet.android.kariyernetchallange.domain.entity.User;
 import com.obilet.android.kariyernetchallange.ui.activity.BaseActivity;
+import com.obilet.android.kariyernetchallange.ui.screen.productlist.ProductListActivity;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.membership.MembershipViewModel;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.membership.MembershipViewModelFactory;
 
@@ -61,7 +62,6 @@ public class LoginActivity extends BaseActivity {
                     passwordEditText.getText().toString(),
                     rememberMeSwitch.isChecked()));
         });
-
 
     }
 }

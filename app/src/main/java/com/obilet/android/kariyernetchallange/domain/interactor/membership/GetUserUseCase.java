@@ -1,5 +1,6 @@
 package com.obilet.android.kariyernetchallange.domain.interactor.membership;
 
+import com.obilet.android.kariyernetchallange.data.repository.membership.MembershipDataRepository;
 import com.obilet.android.kariyernetchallange.domain.entity.User;
 import com.obilet.android.kariyernetchallange.domain.interactor.BaseUseCase;
 import com.obilet.android.kariyernetchallange.domain.repository.MembershipRepository;
@@ -16,7 +17,7 @@ public class GetUserUseCase extends BaseUseCase<User, Object> {
     private final MembershipRepository membershipRepository;
 
     @Inject
-    public GetUserUseCase(MembershipRepository membershipRepository) {
+    public GetUserUseCase(MembershipDataRepository membershipRepository) {
         this.membershipRepository = membershipRepository;
     }
 

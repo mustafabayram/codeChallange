@@ -1,4 +1,4 @@
-package com.obilet.android.kariyernetchallange.ui.screen;
+package com.obilet.android.kariyernetchallange.ui.screen.splash;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.obilet.android.kariyernetchallange.R;
 import com.obilet.android.kariyernetchallange.ui.activity.BaseActivity;
+import com.obilet.android.kariyernetchallange.ui.screen.login.LoginActivity;
+import com.obilet.android.kariyernetchallange.ui.screen.productlist.ProductListActivity;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.splash.SplashViewModel;
 import com.obilet.android.kariyernetchallange.ui.viewmodel.splash.SplashViewModelFactory;
 

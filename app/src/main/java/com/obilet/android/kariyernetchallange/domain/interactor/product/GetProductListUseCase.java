@@ -1,5 +1,6 @@
 package com.obilet.android.kariyernetchallange.domain.interactor.product;
 
+import com.obilet.android.kariyernetchallange.data.repository.product.ProductDataRepository;
 import com.obilet.android.kariyernetchallange.domain.entity.Product;
 import com.obilet.android.kariyernetchallange.domain.interactor.BaseUseCase;
 import com.obilet.android.kariyernetchallange.domain.repository.ProductRepository;
@@ -18,7 +19,7 @@ public class GetProductListUseCase extends BaseUseCase<List<Product>, Object> {
     private final ProductRepository productRepository;
 
     @Inject
-    public GetProductListUseCase(ProductRepository productRepository) {
+    public GetProductListUseCase(ProductDataRepository productRepository) {
         this.productRepository = productRepository;
     }
 

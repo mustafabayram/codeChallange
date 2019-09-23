@@ -1,4 +1,4 @@
-package com.obilet.android.kariyernetchallange.ui.screen;
+package com.obilet.android.kariyernetchallange.ui.screen.productlist;
 
 import com.obilet.android.kariyernetchallange.R;
 import com.obilet.android.kariyernetchallange.ui.activity.BaseActivity;
@@ -10,6 +10,6 @@ public class ProductListActivity extends BaseActivity {
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.activity_login;
+        return R.layout.activity_product_list;
     }
 }
