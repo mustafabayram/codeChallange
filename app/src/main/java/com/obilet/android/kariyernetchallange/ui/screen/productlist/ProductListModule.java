@@ -2,6 +2,7 @@ package com.obilet.android.kariyernetchallange.ui.screen.productlist;
 
 import com.obilet.android.kariyernetchallange.di.ActivityScope;
 import com.obilet.android.kariyernetchallange.ui.activity.ActivityModule;
+import com.obilet.android.kariyernetchallange.ui.screen.productlist.activity.ProductListActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
